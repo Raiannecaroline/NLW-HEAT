@@ -1,0 +1,20 @@
+/*Mexendo na infarce do código/página - Cascating Stylesheet*/
+
+h1 {
+  font-size: 1.5em;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: grid;
+  place-items: center;
+}
+
+a {
+  color: lightgray;
+  text-decoration: none;
+}
