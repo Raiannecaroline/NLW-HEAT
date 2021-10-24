@@ -1,3 +1,4 @@
+//Links das redes sociais e sua implementação no html
 const LinksSocialMedia = {
   github: 'Raiannecaroline',
   linkedin: 'in/raiannecaroline',
@@ -6,6 +7,7 @@ const LinksSocialMedia = {
   twitter: 'Raiannecaroline'
 }
 
+//Função para mudar os links das redes socias para meus links
 function changeSocialMediaLinks() {
   for (let li of socialLinks.children) {
     const social = li.getAttribute('class')
@@ -16,6 +18,7 @@ function changeSocialMediaLinks() {
 
 changeSocialMediaLinks()
 
+//Função para redirecionar os links e armazenar ele no código
 function getGitHubProfileInfos() {
   const url = `https://api.github.com/users/${LinksSocialMedia.github}`
 
@@ -30,3 +33,15 @@ function getGitHubProfileInfos() {
 }
 
 getGitHubProfileInfos()
+
+//Efeito de loop no selo da rocketseat
+var looper;
+var graus = 0;
+
+function rotate(){
+  document.querySelector("#rocketseat").style.transform = `rotate(${graus}deg)`
+  graus++;
+  looper = setTimeout(rotate, 20);
+}
+
+setTimeout(rotate, 60);

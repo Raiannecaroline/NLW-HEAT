@@ -6,23 +6,25 @@
 
 html,
 body {
-  --white: hsl(240, 15%, 85%);
+  --black: hsl(19, 89%, 4%);
   --grey: hsl(240, 9%, 89%);
 
-  height: 50%;
+  height: 100%;
   font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
+/*Cor da página*/
 body {
   display: grid;
   place-items: center;
 
   background: radial-gradient(ellipse at bottom, #fe2e80 0%, #191621 65%);
-  background-size: 300% 300%;
+  background-size: 100% 100%;
   animation: colors 15s ease infinite;
 }
 
+/*Efeito degradê da página*/
 @keyframes colors {
   0% {
     background-position: 0% 50%;
@@ -37,6 +39,7 @@ body {
   }
 }
 
+/*Background da página em SVG e alinhamento dele*/
 main {
   background: url(images/background_container.svg) no-repeat center/cover;
   width: 358px;
@@ -44,7 +47,7 @@ main {
 }
 
 .container {
-  margin-top: 213px;
+  margin-top: 250px;
   max-width: 250px;
   margin-left: auto;
   margin-right: auto;
@@ -75,8 +78,16 @@ main {
   clip-path: polygon(50% 0, 100% 25%, 100% 75%, 49% 100%, 0 75%, 0 25%);
 }
 
+/*Selo da rocketseat com o efeito de rotação*/
+#rocketseat{
+  transform:rotate(0deg);
+  position: absolute;
+  z-index: 1;
+}
+
+/*Formatação dos tamanhos dos textos e de suas posições*/
 h1 {
-  font-size: 1.5em;
+  font-size: 1.5rem;
 
   margin-top: 1.5rem;
 }
@@ -99,7 +110,7 @@ p {
 }
 
 ul {
-  margin-top: 1.5rem;
+  margin-top: 10rem;
 
   list-style: none;
   padding: 0;
@@ -110,6 +121,7 @@ ul {
   justify-content: center;
 }
 
+/*Efeito de transição dos links de ancoramento*/
 li a {
   background: #191621;
   width: 45px;
@@ -132,18 +144,15 @@ li a img:hover {
   width: 25px;
 }
 
+/*Logo da DoWhile 2021*/
 #logoDoWhile2021 {
   margin-top: 4rem;
   width: 200px;
 }
 
-@media (min-width: 960px) {
+/*Media querys da página e sua responsividade*/
+@media only screen and (max-width: 960px) {
   /* estilos versão desktop */
-  body {
-    background: none;
-    background-color: none;
-  }
-
   main {
     background: url(images/background_desktop.svg) no-repeat center/ cover;
     width: 100vw;
@@ -151,17 +160,24 @@ li a img:hover {
     height: 100vh;
     transition: 0.3s;
   }
-}
-
-@media (min-width: 768px) {
-  body {
-    background: none;
-    background-color: none;
+  .container {
+    margin-top: 20px;
   }
 
+  .avatar {
+    width: 10rem;
+    margin: 11rem auto 0;
+    position: relative;
+  }
+
+  ul {
+    margin-top: 0.5rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
   main {
-    background: url(images/background_container_mobile.svg) no-repeat center/
-    cover;
+    background: url(images/background_desktop.svg) no-repeat center/ cover;
     width: 100vw;
     min-height: 812px;
     height: 100vh;
@@ -169,7 +185,8 @@ li a img:hover {
   }
 
   .container {
-    margin-top: 0px;
+    margin: auto;
+    padding: 150px;
   }
 
   .avatar {
@@ -179,19 +196,14 @@ li a img:hover {
   }
 
   ul {
-    margin-top: 3.5rem;
+    margin-top: 0.5rem;
   }
 }
 
 @media only screen and (max-width: 425px) {
-  body {
-    background: none;
-    background-color: none;
-  }
-
   main {
     background: url(images/background_container_mobile.svg) no-repeat center/
-    cover;
+      cover;
     width: 100vw;
     min-height: 812px;
     height: 100vh;
@@ -214,14 +226,9 @@ li a img:hover {
 }
 
 @media only screen and (max-width: 375px) {
-  body {
-    background: none;
-    background-color: none;
-  }
-
   main {
     background: url(images/background_container_mobile.svg) no-repeat
-    center/cover;
+      center/cover;
     width: 100vw;
     min-height: 812px;
     height: 100vh;
