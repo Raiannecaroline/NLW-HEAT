@@ -2,6 +2,10 @@ Olá! Esse projeto eu aprendi a desenvolver um crachá virtual para o evento DoW
 
 O projeto foi feito no evento NLW - HEAT. :heart_eyes: 
 
+O projeto com a página no ar: 
+https://raiannecaroline.github.io/NLW-HEAT/
+
+
 Como ficou a implementação para o desktop :smile: : 
 
 
